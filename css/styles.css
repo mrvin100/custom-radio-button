@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* custom css file made by JeanDoe */
+
+/* import Google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/* css variables */
+
+:root{
+	--main-clr: #567;
+	--light-bg: #e1d1f1;
+	--light-clr: #7a7b7c;
+	--black: #1a1b1c;
+	--white: #fff;
+	
+	--body-font: 'Poppins','Ubuntu Mono', sans-serif;
+}
+
+/* initialisation */
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	font-weight: normal;
+}
+
+html{
+	font-size: 120%;
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	align-items: center;
+	background: var(--light-bg);
+	font-family: var(--body-font);
+}
+
+::selection{
+	background: #d5bbf7;
+}
+
+/* button section starts */
+
+.card{
+	max-width: 25rem;
+	width: 100%;
+	background: var(--white);
+	border-radius: .25rem;
+	padding: 1rem;
+	box-shadow: 0 5px 10px rgba(0,0,0,.15);
+	margin: 1rem;
+}
+
+.card h2{
+	font-size: 1.2rem;
+	color: var(--black);
+	font-weight: 300;
+	text-align: center;
+}
+
+.card .image_container{
+	height: 15rem;
+	width: 100%rem;
+	margin-top: 1rem;
+}
+.card .image_container img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: .25rem;
+}
+
+.card .content{
+	margin-top: 1rem;
+}
+
+.card .box{
+	background: #faf9f9;
+	display: flex;
+	border-radius: .25rem;
+	border: 2px solid transparent;
+	padding: .5rem;
+	margin: .5rem 0;
+	cursor: pointer;
+	transition: all .25s ease;
+}
+
+.card .box .price{
+	font-size: .813rem;
+	display: inline-flex;
+	align-items: center;
+	gap: .5rem;
+	color: var(--main-clr);
+	letter-spacing: .02rem;
+}
+
+.card .box .price i{
+	color: var(--light-clr);
+	display: none;
+}
+
+#four:checked ~ label.fourth,
+#three:checked ~ label.third,
+#two:checked ~ label.second,
+#one:checked ~ label.first{
+	background: #f1f2f2;
+	color: var(--light-clr);
+}
+
+.card label.box:hover{
+	background: #f1f2f2;
+}
+
+.card label.box .check{
+	height: 1.5rem;
+	width: 1.5rem;
+	border: 2px solid transparent;
+	display: inline-block;
+	border-radius: .25rem;
+	transition: all .25s ease;
+	border-color: #8e49e8;
+}
+
+#four:checked ~ label.fourth .price i,
+#three:checked ~ label.third .price i,
+#two:checked ~ label.second .price i,
+#one:checked ~ label.first .price i{
+	display: block;
+}
+
+#four:checked ~ label.fourth .check,
+#three:checked ~ label.third .check,
+#two:checked ~ label.second .check,
+#one:checked ~ label.first .check{
+	background: var(--main-clr);
+	border-color: var(--white);
+}
+
+.card label.box .plan{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	gap: 2rem;
+}
+
+.card input[type="radio"]{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
